@@ -1,6 +1,6 @@
 <!-- ===================== HERO BANNER ===================== -->
 <p align="center">
-  <img src="https://github.com/Engrziaullah/ddddddd/blob/main/github-banner.jpeg" alt="Zia Ullah Banner" />
+  <img src="https://github.com/Engrziaullah/Engrziaullah/blob/main/github-banner.jpeg" />
 </p>
 
 <h1 align="center">Zia Ullah</h1>
