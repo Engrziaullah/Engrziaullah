@@ -1,151 +1,204 @@
-<!-- ===================== HERO BANNER ===================== -->
-<p align="center">
-  <img src="https://github.com/Engrziaullah/Engrziaullah/blob/main/github-banner.jpeg" />
-</p>
+<div align="center">
 
-<h1 align="center">Zia Ullah</h1>
+# Hi, I'm Zia Ullah 👋
 
-<h3 align="center">
-AI Engineer • Machine Learning • Generative & Agentic AI
-</h3>
+### AI/ML Engineer · Generative AI & Agentic AI · Computer Vision · Software Engineering Student
 
-<h4 align="center">
-Software Engineering Undergraduate — University of Malakand, Pakistan 🇵🇰
-</h4>
+I build practical AI systems — from multi-agent pipelines that turn raw conversation into structured clinical documentation, to computer-vision applications people can actually run and click through, not just notebooks. Currently completing a BS in Software Engineering at the **University of Malakand**, Pakistan, while specializing in **LLM-based agents, applied deep learning, and computer vision**.
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=engr-ziaullah&label=Profile%20Views&color=0e75b6&style=flat" />
-</p>
+<a href="mailto:ziaullahbj9@gmail.com"><img src="https://img.shields.io/badge/Email-ziaullahbj9%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/engr-ziaullah-innovation"><img src="https://img.shields.io/badge/LinkedIn-Zia%20Ullah-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
+<a href="https://www.kaggle.com/ziaullah299"><img src="https://img.shields.io/badge/Kaggle-Profile-20BEFF?style=flat-square&logo=kaggle&logoColor=white" /></a>
 
----
+<img src="https://komarev.com/ghpvc/?username=Engrziaullah&label=Profile%20Views&color=0e75b6&style=flat-square" />
 
-## 🧠 About Me
+</div>
 
-I’m **Zia Ullah**, an **AI Engineer** focused on **building real, deployable intelligent systems** — not toy notebooks.
+<br>
 
-My work spans the **entire AI lifecycle**:
-- Data preprocessing & feature engineering  
-- ML / DL model development  
-- Generative AI & LLM-based systems  
-- Agentic AI (reasoning, tools, workflows)  
-- APIs, dashboards, and deployment  
+## About Me
 
-> **Belief:**  
-> AI is engineering discipline + systems thinking — not hype.
+- 🎓 BS Software Engineering student, University of Malakand, Pakistan
+- 🤖 Specializing in **Generative AI, Agentic AI (multi-agent pipelines with LangGraph), and applied Computer Vision**
+- 🩺 Particular interest in **AI for clinical/healthcare workflows** — see the flagship project below
+- 🛠️ Comfortable across the full ML lifecycle: data preprocessing → model development → deployable, real-world applications (Flask, Streamlit, Docker)
+- 📐 Approach AI as an engineering discipline — reproducible pipelines and shippable systems over one-off notebooks
 
----
+<br>
 
-## 🎯 Core Focus Areas
+## Current Focus
 
-- 🤖 Machine Learning & Deep Learning  
-- 🧠 Generative AI (LLMs, RAG, GANs)  
-- 🕸️ Agentic AI (LangChain, LangGraph, LangSmith, n8n)  
-- 📚 NLP & Information Retrieval  
-- 👁️ Computer Vision (YOLO, OpenCV)  
-- 🌐 AI-Powered Web Applications  
+- 🤖 **Machine Learning & Deep Learning** — CNNs, transfer learning, model evaluation
+- 🧠 **Generative AI & LLM Applications** — Groq-hosted LLMs, structured outputs
+- 🔗 **Agentic AI & Multi-Agent Workflows** — LangGraph pipelines, human-in-the-loop review
+- 👁️ **Computer Vision** — MediaPipe, OpenCV, real-time inference
+- 📚 **NLP & Applied Text Classification** — feature engineering, multi-label models
+- 🌐 **Deployable AI Applications** — Flask / Streamlit / Docker
 
----
+<br>
 
-## 🛠️ Skills & Technologies
+## Tech Stack
 
-### 💻 Programming Languages
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,cpp,java,php,sql,html,css,javascript&theme=dark" />
-</p>
+**Languages**
+<br>
+<img src="https://skillicons.dev/icons?i=python,cpp,java,php,html,css,js&theme=dark" />
+<br>
+SQL
 
----
+**AI / Machine Learning**
+<br>
+<img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,scikitlearn&theme=dark" />
+<br>
+Keras · Pandas · NumPy · model evaluation & optimization
 
-### 📊 Data Science, ML & DL
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv&theme=dark" />
-</p>
+**Generative AI / Agentic AI**
+- Multi-agent orchestration with **LangGraph**
+- LLM inference via **Groq** (Llama 3.x)
+- Prompt engineering & structured/validated outputs
+- Human-in-the-loop review design
 
-- Pandas · NumPy  
-- Scikit-learn  
-- TensorFlow · Keras · PyTorch  
-- Matplotlib · Seaborn · Plotly  
-- Model evaluation & optimization  
+**Computer Vision**
+- OpenCV · MediaPipe
+- CNN-based image classification (TensorFlow/Keras)
 
----
+**Data Visualization**
+- Matplotlib · Seaborn · Plotly
 
-### 🧬 Generative AI & Agentic AI
+**Web & Deployment**
+<br>
+<img src="https://skillicons.dev/icons?i=flask,docker,postgresql,mysql,git,github,vscode&theme=dark" />
+<br>
+Streamlit · REST APIs
 
-- LangChain (LLM pipelines, tools)
-- LangGraph (graph-based agent workflows)
-- RAG (Vector DB + LLM reasoning)
-- LangSmith (tracing, evaluation)
-- Prompt engineering & structured outputs
-- Multi-agent systems
+**Tools**
+- Git & GitHub · Jupyter Notebook · VS Code · Docker
 
----
+<br>
 
-### 🌐 Backend, Databases & Deployment
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=flask,fastapi,streamlit,postgresql,mysql,git,aws&theme=dark" />
-</p>
+## Featured Projects
 
-- Flask & FastAPI (APIs)
-- Streamlit (AI dashboards)
-- PostgreSQL · MySQL
-- Git & GitHub
-- Cloud & deployment fundamentals
+### 🚀 Auto-Form-Filling-Agent
+**Multi-agent clinical documentation system** — the flagship project.
 
----
+Doctors manually transcribing patient conversations into intake forms and prescriptions is slow and error-prone. This project automates that path end-to-end: a doctor-patient conversation is captured by microphone, transcribed **entirely offline**, and pushed through a **6-stage LangGraph agent pipeline** that extracts clinical entities, resolves references, normalizes terminology, builds a structured intake form, recommends diagnostic tests by urgency, and applies a human-in-the-loop confidence check — before rendering a formatted prescription image.
 
-### 🌍 Additional Knowledge
-- Networking fundamentals  
-- IoT systems  
-- Jupyter Notebook  
+**Tech:** Python · Vosk (offline speech-to-text) · LangGraph · Groq (Llama 3.3 70B) · Pillow
+
+**Highlights:**
+- Six chained agents: entity extraction → coreference resolution → context normalization → form mapping/validation → AI-driven test ordering → human-in-the-loop review
+- Auto-approves output once a completeness score crosses 60%, otherwise flags it for manual review
+- Fully offline speech recognition — no cloud STT dependency for the audio pipeline
+
+[View Repository →](https://github.com/Engrziaullah/Auto-Form-Filling-Agent/tree/master)
+<sub>Note: the working code lives on the `master` branch of this repository.</sub>
 
 ---
 
-## 🚀 Selected Projects
+### 🤸 Kinetra — Real-Time Human Pose Estimation
+A Flask + MediaPipe web app that detects **33 body landmarks** across three real workflows: photo upload, background-threaded video processing with a live progress bar, and live webcam streaming — plus joint-angle calculation and CSV landmark export.
 
-- 🟢 AI-Powered General Health Query Chatbot  
-- 🟢 Credit Card Fraud Detection System  
-- 🟢 Twitter Sentiment Analysis Platform  
-- 🟢 Industrial Equipment Failure Prediction  
-- 🟢 Data Analysis & Visualization Web App  
+**Tech:** Python · Flask · MediaPipe · OpenCV · Docker · Gunicorn
 
-> Built with **real datasets**, **clean pipelines**, and **deployment-first mindset**.
+**Highlights:**
+- Three distinct inference modes (image / video / live) sharing one processing core, not three separate scripts
+- Background-threaded video jobs with polling-based progress so the UI never blocks
+- Documented system architecture (request flow + sequence diagrams) and a pinned dependency chain for reproducible builds
 
----
+[View Repository →](https://github.com/Engrziaullah/pose-estimation)
 
-## 📊 GitHub Analytics (STABLE)
+<br>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=engr-ziaullah&show_icons=true&theme=tokyonight&cache_seconds=1800" />
-</p>
+<table>
+<tr>
+<td width="50%" valign="top">
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=engr-ziaullah&theme=tokyonight" />
-</p>
+**🏥 MediBot — AI Healthcare Assistant**
+<br>
+Domain-restricted medical Q&A chatbot with content guardrails that keep responses health-focused and filter out off-topic queries.
+<br><br>
+**Tech:** Python · Flask · JavaScript · LLM API
+<br>
+[View Repository →](https://github.com/Engrziaullah/AI-Powered-Healthcare-Assistant)
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=engr-ziaullah&layout=compact&theme=tokyonight" />
-</p>
+</td>
+<td width="50%" valign="top">
 
----
+**🐾 PetVision — Cat vs Dog Classifier**
+<br>
+CNN-based image classifier deployed as an interactive Streamlit dashboard with real-time confidence scores.
+<br><br>
+**Tech:** TensorFlow · Keras · Streamlit
+<br>
+[View Repository →](https://github.com/Engrziaullah/PetVision-AI-Cat-vs-Dog-Classifier-Streamlit-App-)
 
-## 🌐 Connect With Me
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-<p align="center">
-  <a href="mailto:engrziaullahbj9@gmail.com">
-    <img src="https://img.shields.io/badge/Email-engrziaullahbj9%40gmail.com-red?style=for-the-badge&logo=gmail" />
-  </a>
-  <a href="https://www.linkedin.com/in/engr-ziaullah-innovation">
-    <img src="https://img.shields.io/badge/LinkedIn-Professional-blue?style=for-the-badge&logo=linkedin" />
-  </a>
-  <a href="https://www.kaggle.com/ziaullah299">
-    <img src="https://img.shields.io/badge/Kaggle-Profile-20BEFF?style=for-the-badge&logo=kaggle" />
-  </a>
-</p>
+**💬 Multi-Label Emotion Recognition from Text**
+<br>
+NLP pipeline classifying multi-label emotions (joy, sadness, anger, etc.) using SenticNet lexicon + TF-IDF features with BRkNN classifiers, negation handling, and 10-fold cross-validation.
+<br><br>
+**Tech:** Python · scikit-learn · NLP
+<br>
+[View Repository →](https://github.com/Engrziaullah/Multi-Label-Emotion-Recognition-from-Text)
 
----
+</td>
+<td width="50%" valign="top">
 
-## 🧭 Final Statement
+**📊 Customer Segmentation & Clustering**
+<br>
+Unsupervised segmentation on marketing campaign data using K-Means and Hierarchical clustering with PCA dimensionality reduction.
+<br><br>
+**Tech:** scikit-learn · PCA · Seaborn · Plotly
+<br>
+[View Repository →](https://github.com/Engrziaullah/customer-segmentation-clustering)
 
-> I build AI systems that **work in production**, not just demos.
+</td>
+</tr>
+</table>
 
-If you’re a **recruiter**, **researcher**, or **startup** working on serious AI —  
-📩 **Let’s connect.**
+<br>
+
+## GitHub Activity
+
+<div align="center">
+<img src="https://streak-stats.demolab.com?user=Engrziaullah&theme=tokyonight&hide_border=true" />
+</div>
+
+<br>
+
+## Research & Learning Interests
+
+- Agentic AI system design & multi-agent orchestration
+- Retrieval-Augmented Generation (RAG)
+- Applied computer vision for real-time interaction (pose/motion analysis)
+- Healthcare-focused AI tooling
+- NLP for structured information extraction
+
+<br>
+
+## Leadership & Community
+
+**President — IEEE Student Branch, University of Malakand**
+<br>
+Leading technical activities and student engagement for the branch's IEEE chapter.
+
+<br>
+
+## Connect With Me
+
+<a href="mailto:ziaullahbj9@gmail.com"><img src="https://img.shields.io/badge/Email-ziaullahbj9%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/engr-ziaullah-innovation"><img src="https://img.shields.io/badge/LinkedIn-Zia%20Ullah-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
+<a href="https://www.kaggle.com/ziaullah299"><img src="https://img.shields.io/badge/Kaggle-Profile-20BEFF?style=flat-square&logo=kaggle&logoColor=white" /></a>
+<a href="https://github.com/Engrziaullah"><img src="https://img.shields.io/badge/GitHub-Engrziaullah-181717?style=flat-square&logo=github&logoColor=white" /></a>
+
+<br>
+
+<div align="center">
+
+> I build AI systems designed to run, not just demo.
+> If you're a recruiter, researcher, or team working on applied AI — let's talk.
+
+</div>
