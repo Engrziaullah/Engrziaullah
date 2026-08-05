@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Zia Ullah — AI/ML Engineer, Generative AI and Agentic AI, Computer Vision">
+  <defs>
+    <radialGradient id="glow-d" cx="28%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="300" rx="20" fill="#0B0F19"/>
+  <rect x="0" y="0" width="1200" height="300" rx="20" fill="url(#glow-d)"/>
+
+  <!-- network / multi-agent graph motif -->
+  <g stroke="#818CF8" stroke-width="1" opacity="0.32">
+    <line x1="760" y1="70" x2="850" y2="55"/>
+    <line x1="850" y1="55" x2="940" y2="90"/>
+    <line x1="940" y1="90" x2="1020" y2="60"/>
+    <line x1="1020" y1="60" x2="1100" y2="100"/>
+    <line x1="1100" y1="100" x2="1150" y2="150"/>
+    <line x1="1150" y1="150" x2="1080" y2="190"/>
+    <line x1="1080" y1="190" x2="990" y2="220"/>
+    <line x1="990" y1="220" x2="900" y2="180"/>
+    <line x1="900" y1="180" x2="820" y2="230"/>
+    <line x1="820" y1="230" x2="750" y2="190"/>
+    <line x1="750" y1="190" x2="760" y2="70"/>
+    <line x1="900" y1="180" x2="1030" y2="140"/>
+    <line x1="1030" y1="140" x2="940" y2="90"/>
+    <line x1="1030" y1="140" x2="1080" y2="190"/>
+    <line x1="900" y1="180" x2="700" y2="120"/>
+    <line x1="700" y1="120" x2="760" y2="70"/>
+  </g>
+  <g fill="#818CF8">
+    <circle cx="760" cy="70" r="4" opacity="0.8"/>
+    <circle cx="850" cy="55" r="3" opacity="0.7"/>
+    <circle cx="940" cy="90" r="5" opacity="0.85"/>
+    <circle cx="1020" cy="60" r="3" opacity="0.7"/>
+    <circle cx="1100" cy="100" r="4" opacity="0.8"/>
+    <circle cx="1150" cy="150" r="3" opacity="0.7"/>
+    <circle cx="1080" cy="190" r="5" opacity="0.85"/>
+    <circle cx="990" cy="220" r="3" opacity="0.7"/>
+    <circle cx="900" cy="180" r="6" opacity="0.95">
+      <animate attributeName="opacity" values="0.95;0.5;0.95" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="820" cy="230" r="3" opacity="0.7"/>
+    <circle cx="750" cy="190" r="4" opacity="0.8"/>
+    <circle cx="1030" cy="140" r="4" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.45;0.9" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="120" r="3" opacity="0.7"/>
+  </g>
+
+  <!-- text block -->
+  <text x="64" y="98" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" letter-spacing="3" fill="#818CF8">AI / ML ENGINEER</text>
+  <text x="64" y="162" font-family="'Segoe UI', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="54" font-weight="700" fill="#F8FAFC">Zia Ullah</text>
+  <text x="64" y="202" font-family="'Segoe UI', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="21" fill="#94A3B8">Generative AI &#183; Agentic AI &#183; Computer Vision</text>
+  <rect x="64" y="226" width="120" height="3" rx="1.5" fill="#818CF8"/>
+  <text x="64" y="256" font-family="'Segoe UI', ui-sans-serif, system-ui, -apple-system, Helvetica, Arial, sans-serif" font-size="15" fill="#64748B">Final-Year BS Software Engineering &#183; University of Malakand</text>
+</svg>
