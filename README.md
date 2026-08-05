@@ -203,6 +203,16 @@ Unsupervised segmentation on marketing campaign data using K-Means and Hierarchi
 
 <br>
 
+## Live Projects
+
+<div align="center">
+<img width="100%" src="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/projects/projects.svg" alt="Live project stats" />
+</div>
+
+<sub>Generated every 6 hours by <a href="./.github/workflows/projects.yml">a scheduled GitHub Action</a> — pulls live stars/languages for the repos in <a href="./projects.json">projects.json</a>.</sub>
+
+<br>
+
 ## Contribution Snake
 
 <div align="center">
