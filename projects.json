@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Auto-Form-Filling-Agent",
+    "repo": "Engrziaullah/Auto-Form-Filling-Agent",
+    "description": "Multi-agent clinical documentation pipeline — conversation to structured intake form",
+    "tags": ["Python", "LangGraph", "Groq"]
+  },
+  {
+    "name": "Kinetra",
+    "repo": "Engrziaullah/pose-estimation",
+    "description": "Real-time human pose estimation — photo, video, and live webcam modes",
+    "tags": ["Flask", "MediaPipe", "OpenCV"]
+  },
+  {
+    "name": "MediBot",
+    "repo": "Engrziaullah/AI-Powered-Healthcare-Assistant",
+    "description": "Domain-restricted medical Q&A assistant with content guardrails",
+    "tags": ["Python", "Flask", "LLM API"]
+  },
+  {
+    "name": "PetVision",
+    "repo": "Engrziaullah/PetVision-AI-Cat-vs-Dog-Classifier-Streamlit-App-",
+    "description": "CNN-based cat vs dog classifier with a live Streamlit dashboard",
+    "tags": ["TensorFlow", "Keras", "Streamlit"]
+  },
+  {
+    "name": "Emotion Recognition",
+    "repo": "Engrziaullah/Multi-Label-Emotion-Recognition-from-Text",
+    "description": "Multi-label emotion classification from text using SenticNet + TF-IDF",
+    "tags": ["scikit-learn", "NLP"]
+  },
+  {
+    "name": "Customer Segmentation",
+    "repo": "Engrziaullah/customer-segmentation-clustering",
+    "description": "Unsupervised marketing segmentation with K-Means + PCA",
+    "tags": ["scikit-learn", "PCA"]
+  }
+]
