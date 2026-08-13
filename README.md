@@ -50,7 +50,7 @@
 <br/>
 <div align="center">
 
-<a href="mailto:ziaullahbj9@gmail.com">
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=ziaullahbj9@gmail.com">
   <img src="https://img.shields.io/badge/Email-ziaullahbj9%40gmail.com-6366F1?style=for-the-badge&labelColor=0B0F19&logo=gmail&logoColor=white" alt="Email" />
 </a>
 &nbsp;&nbsp;
