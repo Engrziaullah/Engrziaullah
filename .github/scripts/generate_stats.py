@@ -88,7 +88,7 @@ query($login: String!) {
   user(login: $login) {
     pullRequests { totalCount }
     issues { totalCount }
-    repositoriesContributedTo(first: 1, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) {
+    repositoriesContributedTo(first: 1, includeUserRepositories: true, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) {
       totalCount
     }
     repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
@@ -152,7 +152,7 @@ def card_shell(x, y, w, h, title, begin):
     return e  # caller appends body, then must a('</g>') and join
 
 def stats_card(stats, x, y):
-    e = card_shell(x, y, CARD_W, CARD_H, f"{USERNAME}'s GitHub Stats", 0.3)
+    e = card_shell(x, y, CARD_W, CARD_H, "Zia's GitHub Stats", 0.3)
     a = e.append
     ry = 58
     for i, (key, label) in enumerate(STAT_ROWS):
