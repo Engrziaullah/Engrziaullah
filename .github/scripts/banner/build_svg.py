@@ -45,7 +45,7 @@ ROWS = [
     ("__gap__", None),
     ("Core.Lang", "Python, SQL, C++"),
     ("Core.GenAI", "LangChain, LangGraph, LangSmith"),
-    ("Core.Vision", "OpenCV, MediaPipe"),
+    ("Core.Vision", "CNNs, ViT, YOLO, OpenCV"),
     ("Core.ML", "TensorFlow, Keras, scikit-learn"),
     ("Core.Infra", "FastAPI, Flask, Streamlit, AWS"),
     ("__gap__", None),
