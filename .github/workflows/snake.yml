@@ -37,8 +37,13 @@ jobs:
       - name: Preserve existing stats SVGs on the output branch
         run: |
           git fetch origin output --depth=1 2>/dev/null || true
-          git show origin/output:stats.svg > dist/stats.svg 2>/dev/null || true
-          git show origin/output:stats-light.svg > dist/stats-light.svg 2>/dev/null || true
+          for f in stats.svg stats-light.svg; do
+            if git show "origin/output:$f" > "/tmp/$f" 2>/dev/null; then
+              mv "/tmp/$f" "dist/$f"
+            else
+              rm -f "/tmp/$f"
+            fi
+          done
 
       # Publishes dist/ to the "output" branch, so the SVGs are reachable at:
       # https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/output/snake-dark.svg
