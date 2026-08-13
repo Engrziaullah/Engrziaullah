@@ -2,7 +2,7 @@ name: Generate contribution snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */12 * * *"
   workflow_dispatch:
   push:
     branches:
@@ -18,12 +18,15 @@ jobs:
     steps:
       # Renders the contribution grid as a "snake" SVG, once per palette (light/dark),
       # colored to match the indigo/violet accent used across the rest of the profile.
+      # First color_dots stop is the EMPTY cell: on dark it must be a visible slate
+      # (#2d3343), not near-black - GitHub's own bg is #0d1117, so anything close to
+      # black there reads as "grid is broken" rather than "no contributions that day".
       - name: Generate snake SVGs
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake-dark.svg?color_snake=#F8FAFC&color_dots=#161B29,#312E81,#4338CA,#6366F1,#818CF8
+            dist/snake-dark.svg?color_snake=#F8FAFC&color_dots=#2d3343,#312E81,#4338CA,#6366F1,#818CF8
             dist/snake-light.svg?color_snake=#1E1B4B&color_dots=#EEF2FF,#C7D2FE,#A5B4FC,#6366F1,#4F46E5
 
       # Publishes dist/ to the "output" branch, so the SVGs are reachable at:
