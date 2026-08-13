@@ -12,13 +12,27 @@ LOGOS_DIR = os.path.join(HERE, "logos")
 TARGET_N = 900
 RASTER_RES = 260  # supersample grid for fill test, then subsample to TARGET_N points
 
-LOGOS = ["python", "pytorch", "opencv"]
+LOGOS = ["langchain", "langgraph", "langsmith"]
+EXCLUDE_FILL = {"langsmith": "#030710"}  # LangSmith ships a background chip we don't want
 
 
-def rasterize_logo(svg_path, out_res=RASTER_RES):
+def rasterize_logo(svg_path, out_res=RASTER_RES, exclude_fill=None):
     with open(svg_path, "r", encoding="utf-8") as f:
         content = f.read()
-    d_strings = re.findall(r'<path[^>]*\sd="([^"]+)"', content)
+    # Strip <defs>...</defs> (clipPath rects etc.) and <mask ...>...</mask> DEFINITION
+    # blocks (not <g mask="url(#...)"> usages, which we want to keep) - some official
+    # marks (e.g. LangSmith's) ship a background chip + luminance mask alongside the
+    # actual glyph paths; we only want the visible glyph.
+    content = re.sub(r"<defs\b.*?</defs>", "", content, flags=re.DOTALL)
+    content = re.sub(r"<mask\b[^>]*>.*?</mask>", "", content, flags=re.DOTALL)
+    path_tags = re.findall(r"<path\b[^>]*/?>", content)
+    d_strings = []
+    for tag in path_tags:
+        if exclude_fill and f'fill="{exclude_fill}"' in tag:
+            continue
+        m = re.search(r'\sd="([^"]+)"', tag)
+        if m:
+            d_strings.append(m.group(1))
     all_polys = []
     for d in d_strings:
         all_polys.extend([p for p in parse_path_d(d) if len(p) >= 3])
@@ -72,7 +86,7 @@ def main():
     results = {}
     for name in LOGOS:
         svg_path = os.path.join(LOGOS_DIR, f"{name}.svg")
-        mask = rasterize_logo(svg_path)
+        mask = rasterize_logo(svg_path, exclude_fill=EXCLUDE_FILL.get(name))
         fill_frac = mask.mean()
         print(f"{name}: raster fill {fill_frac*100:.1f}% of {RASTER_RES}x{RASTER_RES} box, "
               f"{mask.sum()} candidate px")

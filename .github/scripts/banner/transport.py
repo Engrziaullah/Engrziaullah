@@ -22,23 +22,23 @@ def optimal_match(a, b, seed=0):
 
 
 def main():
-    py = np.load(os.path.join(HERE, "logo_dots_python.npy"))
-    pt = np.load(os.path.join(HERE, "logo_dots_pytorch.npy"))
-    cv = np.load(os.path.join(HERE, "logo_dots_opencv.npy"))
+    a = np.load(os.path.join(HERE, "logo_dots_langchain.npy"))
+    b = np.load(os.path.join(HERE, "logo_dots_langgraph.npy"))
+    c = np.load(os.path.join(HERE, "logo_dots_langsmith.npy"))
 
-    pt_matched, d1, rd1 = optimal_match(py, pt, seed=1)
-    cv_matched, d2, rd2 = optimal_match(pt_matched, cv, seed=2)
+    b_matched, d1, rd1 = optimal_match(a, b, seed=1)
+    c_matched, d2, rd2 = optimal_match(b_matched, c, seed=2)
 
-    print(f"python->pytorch: mean travel {d1.mean():.2f}px (optimal) vs {rd1.mean():.2f}px (random assignment), "
+    print(f"langchain->langgraph: mean travel {d1.mean():.2f}px (optimal) vs {rd1.mean():.2f}px (random assignment), "
           f"{rd1.mean()/d1.mean():.2f}x shorter")
-    print(f"pytorch->opencv: mean travel {d2.mean():.2f}px (optimal) vs {rd2.mean():.2f}px (random assignment), "
+    print(f"langgraph->langsmith: mean travel {d2.mean():.2f}px (optimal) vs {rd2.mean():.2f}px (random assignment), "
           f"{rd2.mean()/d2.mean():.2f}x shorter")
 
     # save the three POSITION SETS each traveler dot visits, in matched order:
-    # index i -> py[i] -> pt_matched[i] -> cv_matched[i]
-    np.save(os.path.join(HERE, "traveler_python.npy"), py)
-    np.save(os.path.join(HERE, "traveler_pytorch.npy"), pt_matched)
-    np.save(os.path.join(HERE, "traveler_opencv.npy"), cv_matched)
+    # index i -> a[i] -> b_matched[i] -> c_matched[i]
+    np.save(os.path.join(HERE, "traveler_langchain.npy"), a)
+    np.save(os.path.join(HERE, "traveler_langgraph.npy"), b_matched)
+    np.save(os.path.join(HERE, "traveler_langsmith.npy"), c_matched)
 
 
 if __name__ == "__main__":

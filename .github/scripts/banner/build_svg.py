@@ -39,15 +39,15 @@ ROWS = [
     ("Subject", "Zia Ullah"),
     ("Role", "AI/ML Engineer"),
     ("Origin", "Malakand, Pakistan"),
-    ("Education", "BS Software Engineering"),
+    ("Education", "BS Software Engineering, 6th Sem"),
     ("Status", "Building + Researching + Shipping"),
-    ("ToolChain", "VS Code, Git, Docker, Jupyter"),
+    ("ToolChain", "VS Code, Git, GitHub, Jupyter"),
     ("__gap__", None),
-    ("Core.Lang", "Python, C++, SQL"),
-    ("Core.GenAI", "LangGraph, Groq"),
+    ("Core.Lang", "Python, SQL, C++"),
+    ("Core.GenAI", "LangChain, LangGraph, LangSmith"),
     ("Core.Vision", "OpenCV, MediaPipe"),
-    ("Core.ML", "PyTorch, TensorFlow, scikit-learn"),
-    ("Core.Infra", "Flask, Streamlit, Docker"),
+    ("Core.ML", "TensorFlow, Keras, scikit-learn"),
+    ("Core.Infra", "FastAPI, Flask, Streamlit, AWS"),
     ("__gap__", None),
     ("Grid.Mail", "ziaullahbj9@gmail.com"),
     ("Grid.Kaggle", "ziaullah299"),
@@ -209,13 +209,13 @@ def build_svg(theme_name, dots_bool, intro_rc, intro_gid, band_grid, band_centro
     p_scale, p_ox, p_oy = make_portrait_transform()
     l_scale, l_ox, l_oy = make_logo_transform()
 
-    python_centroid_local = trav_py.mean(axis=0)  # (x,y) in raster space
-    python_centroid_svg = (l_ox + python_centroid_local[0] * l_scale,
-                            l_oy + python_centroid_local[1] * l_scale)
+    first_logo_centroid_local = trav_py.mean(axis=0)  # (x,y) in raster space; "first logo" = LangChain
+    first_logo_centroid_svg = (l_ox + first_logo_centroid_local[0] * l_scale,
+                                l_oy + first_logo_centroid_local[1] * l_scale)
 
     intro_svg = build_intro_layer(intro_rc, intro_gid, p_scale, p_ox, p_oy, t["portrait"])
     loop_svg = build_loop_portrait_layer(np.column_stack(np.nonzero(dots_bool)), band_grid, band_centroids,
-                                          p_scale, p_ox, p_oy, t["portrait"], python_centroid_svg)
+                                          p_scale, p_ox, p_oy, t["portrait"], first_logo_centroid_svg)
     trav_svg = build_travelers_layer(trav_py, trav_pt, trav_cv, l_scale, l_ox, l_oy, t["chrome"])
 
     info_rows_svg, _ = build_info_rows(t)
@@ -285,9 +285,9 @@ def main():
     intro_gid_light = np.load(os.path.join(HERE, "intro_gid_light.npy"))
     band_grid = np.load(os.path.join(HERE, "band_grid.npy"))
     band_centroids = np.load(os.path.join(HERE, "band_centroids.npy"))
-    trav_py = np.load(os.path.join(HERE, "traveler_python.npy"))
-    trav_pt = np.load(os.path.join(HERE, "traveler_pytorch.npy"))
-    trav_cv = np.load(os.path.join(HERE, "traveler_opencv.npy"))
+    trav_py = np.load(os.path.join(HERE, "traveler_langchain.npy"))
+    trav_pt = np.load(os.path.join(HERE, "traveler_langgraph.npy"))
+    trav_cv = np.load(os.path.join(HERE, "traveler_langsmith.npy"))
 
     os.makedirs(OUT_DIR, exist_ok=True)
 
