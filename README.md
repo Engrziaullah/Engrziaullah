@@ -43,8 +43,24 @@
 <br/>
 <br/>
 <div align="center">
-<img width="100%" src="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/projects/projects.svg" alt="Projects" />
+<img width="100%" src="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/projects/projects.svg" alt="Projects" usemap="#projects-map" />
 </div>
+
+<!-- Clickable regions over the SVG above. img-embedded SVG links don't fire
+     (<img> never runs interactivity inside the image), so this HTML image map
+     is what actually makes each card clickable. Coordinates are in the SVG's
+     native pixel grid (browsers auto-scale them to the rendered width) and
+     come straight from generate_projects.py's card layout math (MARGIN=5,
+     CARD_W=578, CARD_H=168, GAP=14) in projects.json's order. If projects.json
+     is reordered or a project is added/removed, these need regenerating. -->
+<map name="projects-map">
+  <area shape="rect" coords="5,42,583,210" href="https://github.com/Engrziaullah/Auto-Form-Filling-Agent" alt="Auto-Form-Filling-Agent">
+  <area shape="rect" coords="601,42,1179,210" href="https://github.com/Engrziaullah/pose-estimation" alt="Kinetra">
+  <area shape="rect" coords="5,224,583,392" href="https://github.com/Engrziaullah/AI-Powered-Healthcare-Assistant" alt="MediBot">
+  <area shape="rect" coords="601,224,1179,392" href="https://github.com/Engrziaullah/PetVision-AI-Cat-vs-Dog-Classifier-Streamlit-App-" alt="PetVision">
+  <area shape="rect" coords="5,406,583,574" href="https://github.com/Engrziaullah/Multi-Label-Emotion-Recognition-from-Text" alt="Emotion Recognition">
+  <area shape="rect" coords="601,406,1179,574" href="https://github.com/Engrziaullah/customer-segmentation-clustering" alt="Customer Segmentation">
+</map>
 
 <!-- ===== SOCIAL BADGES ===== -->
 <br/>
