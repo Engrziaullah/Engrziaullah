@@ -2,8 +2,8 @@
   {
     "name": "Auto-Form-Filling-Agent",
     "repo": "Engrziaullah/Auto-Form-Filling-Agent",
-    "description": "Multi-agent clinical documentation pipeline — conversation to structured intake form",
-    "tags": ["Python", "LangGraph", "Groq"]
+    "description": "Multi-agent LangGraph pipeline — doctor-patient audio to structured EHR forms, 90%+ field accuracy",
+    "tags": ["Python", "LangGraph", "LLM"]
   },
   {
     "name": "Kinetra",
@@ -32,7 +32,7 @@
   {
     "name": "Customer Segmentation",
     "repo": "Engrziaullah/customer-segmentation-clustering",
-    "description": "Unsupervised marketing segmentation with K-Means + PCA",
+    "description": "Clustering model grouping users by spending behavior and demographics for targeted marketing",
     "tags": ["scikit-learn", "PCA"]
   }
 ]

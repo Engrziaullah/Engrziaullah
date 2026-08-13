@@ -6,8 +6,10 @@ Reads projects.json (user curated) + live GitHub data merged by the workflow.
 One SVG, 2-column grid of mini terminal cards. Add/remove/reorder projects by
 editing projects.json — the README never changes.
 
-Theme: matches the profile banner (navy #0A101F, indigo #818CF8/#6366F1/#4338CA,
-emerald #10B981, mono font, dotted leaders, pulsing dots, animated accents).
+Theme: matches the profile banner (navy #0A101F, chrome cyan #22D3EE/#0891B2,
+portrait/accent indigo #818CF8/#4F46E5, emerald #10B981, mono font, dotted
+leaders, pulsing dots, animated accents). Chrome and portrait/accent are
+deliberately different hues - see the banner's own palette rule.
 """
 import json, base64, os, sys, math, html
 from datetime import datetime, timezone
@@ -16,23 +18,23 @@ from datetime import datetime, timezone
 THEMES = {
     "dark": {
         "BG": "#0A101F", "PANEL": "#0C1426", "PANEL_BAR": "#0B1222",
-        "CYAN": "#818CF8", "VIOLET": "#6366F1", "VIOLET2": "#4338CA",
+        "CYAN": "#22D3EE", "VIOLET": "#818CF8", "VIOLET2": "#818CF8",
         "EMERALD": "#10B981", "TEXT": "#F8FAFC", "MUTED": "#94A3B8",
         "DIM": "#475569",
-        "STROKE": "rgba(129,140,248,0.28)", "STROKE_HI": "rgba(129,140,248,0.5)",
-        "STROKE_LO": "rgba(129,140,248,0.22)", "BARLINE": "rgba(255,255,255,0.08)",
-        "RING_BG": "rgba(148,163,184,0.15)", "PILL_BG": "rgba(67,56,202,0.28)",
-        "PILL_STROKE": "rgba(99,102,241,0.5)", "MONO_TX": "#EEF2FF",
+        "STROKE": "rgba(34,211,238,0.28)", "STROKE_HI": "rgba(34,211,238,0.5)",
+        "STROKE_LO": "rgba(34,211,238,0.22)", "BARLINE": "rgba(255,255,255,0.08)",
+        "RING_BG": "rgba(148,163,184,0.15)", "PILL_BG": "rgba(129,140,248,0.28)",
+        "PILL_STROKE": "rgba(129,140,248,0.5)", "MONO_TX": "#0B0F19",
     },
     "light": {
         "BG": "#F8FAFC", "PANEL": "#FFFFFF", "PANEL_BAR": "#F1F5F9",
-        "CYAN": "#4F46E5", "VIOLET": "#6366F1", "VIOLET2": "#4338CA",
+        "CYAN": "#0891B2", "VIOLET": "#4F46E5", "VIOLET2": "#4F46E5",
         "EMERALD": "#059669", "TEXT": "#0F172A", "MUTED": "#475569",
         "DIM": "#94A3B8",
-        "STROKE": "rgba(79,70,229,0.30)", "STROKE_HI": "rgba(79,70,229,0.55)",
-        "STROKE_LO": "rgba(79,70,229,0.20)", "BARLINE": "rgba(0,0,0,0.08)",
-        "RING_BG": "rgba(100,116,139,0.20)", "PILL_BG": "rgba(67,56,202,0.12)",
-        "PILL_STROKE": "rgba(99,102,241,0.4)", "MONO_TX": "#FFFFFF",
+        "STROKE": "rgba(8,145,178,0.30)", "STROKE_HI": "rgba(8,145,178,0.55)",
+        "STROKE_LO": "rgba(8,145,178,0.20)", "BARLINE": "rgba(0,0,0,0.08)",
+        "RING_BG": "rgba(100,116,139,0.20)", "PILL_BG": "rgba(79,70,229,0.12)",
+        "PILL_STROKE": "rgba(79,70,229,0.4)", "MONO_TX": "#FFFFFF",
     },
 }
 
@@ -46,7 +48,10 @@ def set_theme(name):
     g = globals()
     for k, v in t.items():
         g[k] = v
-    g["DONUT_COLORS"] = [t["VIOLET"], t["CYAN"], t["EMERALD"], t["VIOLET2"], "#64748B", "#94A3B8"]
+    # VIOLET and VIOLET2 are now the same accent value (only one portrait/accent
+    # shade in the palette), so the donut can't lean on them as two distinct
+    # slices past the 3rd language - fall through to neutral grays instead.
+    g["DONUT_COLORS"] = [t["VIOLET"], t["CYAN"], t["EMERALD"], "#64748B", "#94A3B8", "#CBD5E1"]
 
 set_theme("dark")
 
