@@ -19,31 +19,11 @@
 
 <br/>
 
-<!--
-  ACTION REQUIRED to enable the Stats + Top Languages cards below:
-  The shared public github-readme-stats.vercel.app instance is currently down
-  (503 DEPLOYMENT_PAUSED as of this writing), so it's intentionally left
-  disabled rather than shipping broken images.
-
-  To enable it on your own reliable, self-owned instance (~2 minutes):
-    1. Fork https://github.com/anuraghazra/github-readme-stats
-    2. Go to https://vercel.com -> Add New... -> Project -> import your fork
-    3. Deploy with default settings (no config needed)
-    4. Vercel gives you a URL like: github-readme-stats-xxxx.vercel.app
-    5. Replace YOUR-STATS-HOST below with that domain, then remove the
-       HTML comment markers that wrap this block so it renders.
-
-  Stats + Top languages — side by side:
-
+<!-- Stats + Top languages — self-hosted via .github/scripts/generate_stats.py, no fork/Vercel/third-party instance -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://YOUR-STATS-HOST.vercel.app/api?username=Engrziaullah&show_icons=true&hide_rank=true&hide_border=true&title_color=818CF8&icon_color=818CF8&text_color=94A3B8&bg_color=0B0F19&card_width=500">
-  <img width="49%" src="https://YOUR-STATS-HOST.vercel.app/api?username=Engrziaullah&show_icons=true&hide_rank=true&hide_border=true&title_color=4F46E5&icon_color=4F46E5&text_color=475569&bg_color=FFFFFF&card_width=500" alt="Zia's GitHub stats">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/output/stats.svg" />
+  <img width="100%" src="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/output/stats-light.svg" alt="Zia's GitHub stats and top languages" />
 </picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://YOUR-STATS-HOST.vercel.app/api/top-langs/?username=Engrziaullah&layout=compact&langs_count=8&hide_border=true&title_color=818CF8&text_color=94A3B8&bg_color=0B0F19&card_width=500">
-  <img width="49%" src="https://YOUR-STATS-HOST.vercel.app/api/top-langs/?username=Engrziaullah&layout=compact&langs_count=8&hide_border=true&title_color=4F46E5&text_color=475569&bg_color=FFFFFF&card_width=500" alt="Top languages">
-</picture>
--->
 
 </div>
 

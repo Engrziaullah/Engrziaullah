@@ -1,0 +1,47 @@
+name: Generate GitHub Stats Panel
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/scripts/generate_stats.py"
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate stats.svg
+        env:
+          STATS_PAT: ${{ secrets.STATS_PAT }}
+        run: |
+          mkdir -p out
+          python3 .github/scripts/generate_stats.py out
+
+      # crazy-max/ghaction-github-pages force-replaces the whole target
+      # branch with build_dir by default, and snake.yml publishes to this
+      # same "output" branch - without this, whichever workflow runs last
+      # would wipe the other's SVGs. Pull the snake's current files in
+      # first so every push carries both sets.
+      - name: Preserve existing snake SVGs on the output branch
+        run: |
+          git fetch origin output --depth=1 2>/dev/null || true
+          git show origin/output:snake-dark.svg > out/snake-dark.svg 2>/dev/null || true
+          git show origin/output:snake-light.svg > out/snake-light.svg 2>/dev/null || true
+
+      - name: Push SVGs to output branch
+        uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: output
+          build_dir: out
+          commit_message: "Update stats panel [skip ci]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

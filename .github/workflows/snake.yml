@@ -29,6 +29,17 @@ jobs:
             dist/snake-dark.svg?color_snake=#F8FAFC&color_dots=#2d3343,#312E81,#4338CA,#6366F1,#818CF8
             dist/snake-light.svg?color_snake=#1E1B4B&color_dots=#EEF2FF,#C7D2FE,#A5B4FC,#6366F1,#4F46E5
 
+      # crazy-max/ghaction-github-pages force-replaces the whole target
+      # branch with build_dir by default, and stats.yml also publishes to
+      # this "output" branch - without this, whichever workflow runs last
+      # would wipe the other's SVGs. Pull the stats panel's current files
+      # in first so every push carries both sets.
+      - name: Preserve existing stats SVGs on the output branch
+        run: |
+          git fetch origin output --depth=1 2>/dev/null || true
+          git show origin/output:stats.svg > dist/stats.svg 2>/dev/null || true
+          git show origin/output:stats-light.svg > dist/stats-light.svg 2>/dev/null || true
+
       # Publishes dist/ to the "output" branch, so the SVGs are reachable at:
       # https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/output/snake-dark.svg
       # https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/output/snake-light.svg
