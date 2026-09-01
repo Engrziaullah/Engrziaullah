@@ -40,23 +40,6 @@
 </div>
 
 <!-- ===== END SNAKE ===== -->
-<br/>
-<br/>
-<div align="center">
-<img width="100%" src="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/projects/header.svg" alt="Projects" />
-<br/><br/>
-
-<!-- Each card is its own image wrapped in a real <a href> - GitHub strips
-     <map>/<area> from READMEs entirely, so this is the only reliable way to
-     make individual regions of the projects panel clickable. Order matches
-     projects.json; card-N.svg filenames come from generate_projects.py. -->
-<a href="https://github.com/Engrziaullah/Auto-Form-Filling-Agent"><img width="49%" src="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/projects/card-0.svg" alt="Auto-Form-Filling-Agent" /></a>
-<a href="https://github.com/Engrziaullah/pose-estimation"><img width="49%" src="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/projects/card-1.svg" alt="Kinetra" /></a>
-<a href="https://github.com/Engrziaullah/AI-Powered-Healthcare-Assistant"><img width="49%" src="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/projects/card-2.svg" alt="MediBot" /></a>
-<a href="https://github.com/Engrziaullah/PetVision-AI-Cat-vs-Dog-Classifier-Streamlit-App-"><img width="49%" src="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/projects/card-3.svg" alt="PetVision" /></a>
-<a href="https://github.com/Engrziaullah/Multi-Label-Emotion-Recognition-from-Text"><img width="49%" src="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/projects/card-4.svg" alt="Emotion Recognition" /></a>
-<a href="https://github.com/Engrziaullah/customer-segmentation-clustering"><img width="49%" src="https://raw.githubusercontent.com/Engrziaullah/Engrziaullah/projects/card-5.svg" alt="Customer Segmentation" /></a>
-</div>
 
 <!-- ===== SOCIAL BADGES ===== -->
 <br/>
